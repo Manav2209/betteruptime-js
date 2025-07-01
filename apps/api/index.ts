@@ -12,6 +12,8 @@ app.get('/', (req, res) => {
   res.send('Better Uptime API is running');
 });
 
+
+
 app.post ('/user/signup' , async (req, res) => {
     const data = AuthSchema.safeParse(req.body);
 
@@ -125,3 +127,6 @@ app.get("/status/:websiteId", authMiddleware, async (req, res) => {
     })
 
 })
+
+
+app.listen(3000)
